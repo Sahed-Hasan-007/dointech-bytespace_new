@@ -18,7 +18,7 @@ export function Navbar() {
   }, []);
 
   return (
-    <header className={`sticky top-0 z-20 -mb-24 text-white transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${isScrolled ? "border-b border-white/20 bg-[#003BE2]/95 shadow-lg backdrop-blur-md" : "border-b border-transparent bg-transparent"}`}>
+    <header className={`sticky top-0 z-20 -mb-24 text-[#E5E6E8] transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${isScrolled ? "border-b border-white/20 bg-[#003BE2]/95 shadow-lg backdrop-blur-md" : "border-b border-transparent bg-transparent"}`}>
       <nav aria-label="Main navigation" className="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-6 sm:px-10 lg:px-[8.33%]">
         <a href="/" aria-label="ByteSpace home" className="shrink-0">
           <Image src="/images/nav_Logo.png" alt="ByteSpace" width={172} height={40} priority className="h-auto hover:scale-110 transition duration-300 w-[142px] sm:w-[164px]" />
@@ -26,7 +26,7 @@ export function Navbar() {
 
         <ul className="hidden items-center gap-10 text-[15px] font-medium md:flex">
           {navItems.map((item) => (
-            <li key={item}><a href={item === "Home" ? "/" : `/#${item.toLowerCase()}`} className={`${underline} transition-opacity hover:opacity-70`}>{item}</a></li>
+            <li key={item}><a href={item === "Home" ? "/" : `/#${item.toLowerCase()}`} className={`${underline} transition-opacity text-[#E5E6E8] hover:opacity-70`}>{item}</a></li>
           ))}
         </ul>
 
