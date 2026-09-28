@@ -18,13 +18,13 @@ export function Footer() {
             <p className="mt-5 text-sm leading-6">Stay up to date with our latest features and releases by joining our newsletter.</p>
             <form action="#" className="mt-10 flex max-w-[505px] flex-col gap-3 sm:flex-row">
               <label htmlFor="newsletter-email" className="sr-only">Your email address</label>
-              <input id="newsletter-email" name="email" type="email" placeholder="Enter your email" required className="h-[53px] min-w-0 flex-1 rounded-full border border-[#d0d0d4] px-6 text-sm outline-none transition focus:border-[#a9d900]" />
-              <button type="submit" className="h-[47px] self-start rounded-full bg-[#D0FF00] px-6 text-base font-medium text-[#181818] transition-colors hover:bg-[#b9eb00] sm:h-[47px]">Search</button>
+              <input id="newsletter-email" name="email" type="email" placeholder="Enter your email" required className="h-[53px] w-full min-w-0 flex-none rounded-full border border-[#d0d0d4] px-6 text-sm outline-none transition focus:border-[#a9d900] sm:h-[53px] sm:w-auto sm:flex-1" />
+              <button type="submit" className="h-[47px] w-full self-stretch rounded-full bg-[#D0FF00] px-6 text-base font-medium text-[#181818] transition-colors hover:bg-[#b9eb00] sm:h-[47px] sm:w-auto sm:self-start">Search</button>
             </form>
             <p className="mt-6 max-w-[500px] text-xs leading-5 text-[#424247]">By subscribing, you agree to our Privacy Policy and consent to receive updates from our company.</p>
           </div>
 
-          <nav aria-label="Footer navigation" className="grid grid-cols-2 gap-x-8 gap-y-9 sm:grid-cols-3 sm:gap-x-6">
+          <nav aria-label="Footer navigation" className="grid grid-cols-1 gap-x-8 gap-y-8 min-[420px]:grid-cols-2 sm:grid-cols-3 sm:gap-x-6">
             {footerGroups.map((group, index) => (
               <ul key={index} className="space-y-[18px] text-sm">
                 {group.links.map((link) => (
@@ -47,6 +47,8 @@ export function Footer() {
     </footer>
   );
 }
+
+
 
 
 
