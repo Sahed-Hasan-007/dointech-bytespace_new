@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const footerGroups = [
   { links: ["Featured Courses", "Featured Categories", "Business", "IT", "Design"] },
   { links: ["Development", "Marketing", "Photography", "Finance", "Sport"] },
@@ -10,11 +12,8 @@ export function Footer() {
       <div className="mx-auto max-w-[1440px] px-6 pb-7 pt-14 sm:px-10 sm:pt-16 lg:px-[8.33%] lg:pt-[72px]">
         <div className="grid gap-12 lg:grid-cols-[1.65fr_1.65fr] lg:gap-16">
           <div>
-            <a href="/" aria-label="ByteSpace home" className="inline-flex items-center gap-2.5">
-              <svg aria-hidden="true" viewBox="0 0 28 32" className="h-8 w-7 text-[#D0FF00]" fill="currentColor">
-                <path d="M2 1h5c8 0 13 5 13 13v2h1c4 0 7 3 7 7s-3 8-8 8H2V1Zm7 6v18h9c-1-5-4-8-9-9V7Z" />
-              </svg>
-              <span className="text-[25px] font-extrabold tracking-[-1.2px] text-[#29292d]">ByteSpace</span>
+            <a href="/" aria-label="ByteSpace home" className="shrink-0">
+              <Image src="/images/footer_Logo.png" alt="ByteSpace" width={172} height={40} priority className="h-auto hover:scale-110 transition duration-300 w-[142px] sm:w-[164px]" />
             </a>
             <p className="mt-5 text-sm leading-6">Stay up to date with our latest features and releases by joining our newsletter.</p>
             <form action="#" className="mt-10 flex max-w-[505px] flex-col gap-3 sm:flex-row">
