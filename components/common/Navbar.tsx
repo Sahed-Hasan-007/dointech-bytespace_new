@@ -45,7 +45,7 @@ export function Navbar() {
 
   return (
     <header className={`sticky top-0 z-20 -mb-24 text-[#E5E6E8] transition-[background-color,border-color,box-shadow,backdrop-filter] duration-300 ${isScrolled ? "border-b border-white/20 bg-[#003BE2]/95 shadow-lg backdrop-blur-md" : "border-b border-transparent bg-transparent"}`}>
-      <nav aria-label="Main navigation" className="mx-auto flex h-24 max-w-[1440px] items-center justify-between px-5 sm:px-10 lg:px-[8.33%]">
+      <nav aria-label="Main navigation" className="mx-auto flex h-18 sm:h-24 max-w-[1440px] items-center justify-between px-5 sm:px-10 lg:px-[8.33%]">
         <a href="/" aria-label="ByteSpace home" className="shrink-0">
           <Image src="/images/nav_Logo.png" alt="ByteSpace" width={172} height={40} priority className="h-auto w-[136px] transition duration-300 hover:scale-105 sm:w-[164px]" />
         </a>
