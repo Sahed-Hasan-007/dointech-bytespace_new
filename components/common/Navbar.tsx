@@ -58,7 +58,7 @@ export function Navbar() {
 
         <div className="hidden items-center gap-5 md:flex">
           <a href="/login" className={`${underline} text-sm font-medium transition-opacity hover:opacity-70`}>Sign In</a>
-          <a href="/signup" className={`${underline} text-sm font-medium transition-opacity hover:opacity-70`}>Join Us</a>
+          <a href="/register" className={`${underline} text-sm font-medium transition-opacity hover:opacity-70`}>Join Us</a>
           <a href="/#cart" aria-label="Shopping cart" className="relative grid size-10 place-items-center rounded-full transition-colors hover:bg-white/15 after:absolute after:bottom-0 after:left-1/2 after:h-px after:w-4 after:-translate-x-1/2 after:scale-x-0 after:bg-current after:transition-transform after:duration-300 hover:after:scale-x-100">
             <Icon icon="material-symbols:shopping-bag-outline" aria-hidden="true" className="size-[21px]" />
           </a>
@@ -111,7 +111,7 @@ export function Navbar() {
 
         <div className="mt-6 border-t border-white/20 pt-5">
           <a href="/login" onClick={closeMenu} className="block rounded-lg px-3 py-3 text-base transition-colors hover:bg-white/10 active:bg-white/20 active:shadow-[inset_0_2px_10px_rgba(0,0,0,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D0FF00]">Sign In</a>
-          <a href="/signup" onClick={closeMenu} className="block rounded-lg px-3 py-3 text-base transition-colors hover:bg-white/10 active:bg-white/20 active:shadow-[inset_0_2px_10px_rgba(0,0,0,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D0FF00]">Join Us</a>
+          <a href="/register" onClick={closeMenu} className="block rounded-lg px-3 py-3 text-base transition-colors hover:bg-white/10 active:bg-white/20 active:shadow-[inset_0_2px_10px_rgba(0,0,0,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#D0FF00]">Join Us</a>
         </div>
       </aside>
     </header>
