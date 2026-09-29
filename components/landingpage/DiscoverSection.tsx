@@ -76,7 +76,7 @@ export function DiscoverSection() {
   );
 
   return (
-    <section id="courses" className="bg-white px-5 py-20 text-[#101322] sm:px-8 sm:py-24">
+    <section id="courses" className="bg-white px-5 py-14 text-[#101322] sm:px-8 sm:py-24">
       <div className="mx-auto max-w-[1120px]">
         <header className="mx-auto max-w-[1120px] text-center">
           <h2 className="text-3xl font-bold leading-[1.12] tracking-[-0.035em] sm:text-4xl md:text-5xl">
