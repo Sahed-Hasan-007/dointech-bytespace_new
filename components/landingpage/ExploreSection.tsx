@@ -11,7 +11,7 @@ const learningPaths = [
 
 export function ExploreSection() {
   return (
-    <section id="explore" className="bg-white px-5 py-14 sm:px-8 sm:py-24">
+    <section id="explore" className="bg-white px-5 py-14 sm:px-8 sm:py-12">
       <div className="mx-auto max-w-7xl text-center">
         <h2 className="text-3xl font-semibold tracking-tight text-[#080b20] sm:text-4xl lg:text-5xl">
           Explore Diverse Learning Paths at Bytespace
