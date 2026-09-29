@@ -1,4 +1,8 @@
+"use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { animateCounter } from "@/composables/helper";
 
 const benefits = [
   "Share Your Expertise",
@@ -6,6 +10,42 @@ const benefits = [
   "Flexibility and Autonomy",
   "Build a Community",
 ];
+
+function AnimatedStat({ value, label, suffix = "", thousands = false }: { value: number; label: string; suffix?: string; thousands?: boolean }) {
+  const [count, setCount] = useState(0);
+  const statRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const node = statRef.current;
+    if (!node) return;
+
+    let stopAnimation: (() => void) | undefined;
+    const observer = new IntersectionObserver(([entry]) => {
+      if (!entry.isIntersecting) return;
+      stopAnimation = animateCounter({ to: value, onUpdate: setCount });
+      observer.disconnect();
+    }, { threshold: 0.4 });
+
+    observer.observe(node);
+    return () => {
+      observer.disconnect();
+      stopAnimation?.();
+    };
+  }, [value]);
+
+  const formattedCount = thousands && count >= 1000
+    ? `${(count / 1000).toFixed(1).replace(/\.0$/, "")}K`
+    : count.toLocaleString();
+
+  return (
+    <div ref={statRef}>
+      <p className="text-3xl font-semibold tracking-[-0.04em] text-[#064BFF] sm:text-4xl">
+        {formattedCount}{suffix}
+      </p>
+      <p className="mt-1 text-sm text-[#5f6069] sm:text-base">{label}</p>
+    </div>
+  );
+}
 
 export function ProfessionalSection() {
   return (
@@ -30,14 +70,11 @@ export function ProfessionalSection() {
             </p>
             <div className="mt-8 flex gap-8 sm:gap-12">
               {[
-                ["12K", "Students"],
-                ["70+", "Courses"],
-                ["16", "Creators"],
-              ].map(([value, label]) => (
-                <div key={label}>
-                  <p className="text-3xl font-semibold tracking-[-0.04em] text-[#064BFF] sm:text-4xl">{value}</p>
-                  <p className="mt-1 text-sm text-[#5f6069] sm:text-base">{label}</p>
-                </div>
+                { value: 12000, label: "Students", thousands: true, suffix: "" },
+                { value: 70, label: "Courses", thousands: false, suffix: "+" },
+                { value: 16, label: "Creators", thousands: false, suffix: "" },
+              ].map((stat) => (
+                <AnimatedStat key={stat.label} {...stat} />
               ))}
             </div>
           </div>
