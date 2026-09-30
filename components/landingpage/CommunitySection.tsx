@@ -86,7 +86,7 @@ export function CommunitySection() {
                 <Image src={person.image} alt={`${person.name} portrait`} width={80} height={80} className="size-20 rounded-full object-cover" />
                 <h3 className="mt-5 text-lg font-semibold tracking-tight text-black">{person.name}</h3>
                 <p className="mt-0.5 text-base text-[#064BFF]">{person.role}</p>
-                <p className="mt-6 text-sm leading-[1.8] text-[#5f6069] sm:text-base">{person.quote}</p>
+                <p className="mt-6 text-sm leading-[1.8] text-[#5f6069] sm:text-sm lg:text-base">{person.quote}</p>
               </article>
             );
           })}

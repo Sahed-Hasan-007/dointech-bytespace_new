@@ -83,7 +83,7 @@ export default function RegisterPage() {
         </form>
 
         <p className="mt-auto pt-10 text-center text-sm text-[#5f6069]">
-          Already have an account? <a href="/login" className="text-[#064BFF] hover:underline">Login</a>
+          Already have an account? <a href="/pages/login" className="text-[#064BFF] hover:underline">Login</a>
         </p>
       </div>
     </AuthLayout>

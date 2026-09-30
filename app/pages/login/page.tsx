@@ -84,7 +84,7 @@ export default function LoginPage() {
         </div>
 
         <p className="mt-auto pt-10 text-center text-sm text-[#858995]">
-          New user? <a href="/register" className="text-[#064BFF] hover:underline">Create an account</a>
+          New user? <a href="/pages/register" className="text-[#064BFF] hover:underline">Create an account</a>
         </p>
       </div>
     </AuthLayout>

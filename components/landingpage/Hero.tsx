@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section
       aria-label="ByteSpace introduction"
-      className="relative isolate min-h-[min(720px,120svh)] md:min-h-[min(1400px,170svh)] overflow-hidden bg-[#003BE2]"
+      className="relative isolate min-h-[min(720px,120svh)] md:min-h-[min(1100px,140svh)] lg:min-h-[min(1400px,170svh)] overflow-hidden bg-[#003BE2]"
     >
       <div
         aria-hidden="true"

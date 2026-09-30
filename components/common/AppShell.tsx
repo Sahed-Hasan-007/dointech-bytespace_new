@@ -7,7 +7,7 @@ import { Navbar } from "@/components/common/Navbar";
 
 export function AppShell({ children }: { children: ReactNode }) {
   const pathname = usePathname();
-  const isAuthPage = pathname === "/login" || pathname === "/register";
+  const isAuthPage = pathname === "/pages/login" || pathname === "/pages/register";
 
   return (
     <>
