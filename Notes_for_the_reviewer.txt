@@ -1,0 +1,28 @@
+### Notes for the reviewer
+
+Features:
+- Responsive landing page and mobile navigation with menu item sidebar.
+- Sticky navbar.
+- Sign-in and registration pages.
+- Use React Hook Form with Yup validation for sign-in and registration     form validation (client-side validation).
+- Custom ByteSpace browser tab icon.
+- Custom slider in community section.
+- Made a counter function inside composables/helper.ts for counter animation.
+- Use React Iconify for icons.
+- Everything is responsive for pc,laptop,tab and mobile screen.
+
+Tech stack:
+- Next.js | `16.3.6`
+- React | `19.2.8`
+- React DOM | `19.2.8`
+- TypeScript | `^5`
+- Tailwind CSS | `^4`
+- React Hook Form | `^7.89.0`
+- Yup | `^1.7.1`
+- `@iconify/react` | `^6.0.2`
+
+
+
+
+
+
