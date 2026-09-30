@@ -72,7 +72,6 @@ export function CommunitySection() {
               : offset < 0
                 ? "translateX(calc(-50% - 100% - 1.5rem))"
                 : "translateX(calc(-50% + 100% + 1.5rem))";
-
             return (
               <article
                 key={person.name}
