@@ -28,14 +28,16 @@ export function AuthLayout({ eyebrow, description, children }: AuthLayoutProps) 
             <h1 className="text-xl font-semibold tracking-[-0.02em]">{eyebrow}</h1>
             <p className="mt-4 text-base leading-[1.8] text-white/90 sm:text-lg">{description}</p>
           </div>
-          <Image
-            src="/images/login_reg.png"
-            alt="Online course cards and a happy community of learners"
-            width={552}
-            height={586}
-            sizes="(min-width: 1024px) 42vw, 90vw"
-            className="mx-auto mt-8 h-auto w-full max-w-[500px] sm:mt-10 lg:mt-12"
-          />
+          <div className="auth-image-perspective mx-auto mt-8 w-full max-w-[500px] sm:mt-10 lg:mt-12">
+            <Image
+              src="/images/login_reg.png"
+              alt="Online course cards and a happy community of learners"
+              width={552}
+              height={586}
+              sizes="(min-width: 1024px) 42vw, 90vw"
+              className="auth-image-rotate h-auto w-full"
+            />
+          </div>
         </section>
 
         <section className="flex w-full items-center justify-center text-[#24252b]">
